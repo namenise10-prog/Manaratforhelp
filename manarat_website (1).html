@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة منارات الدولية للعمل الخيري والتنمية</title>
+    
+    <!-- Tailwind CSS for clean and modern responsive utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for numbers/latin and Tajawal for magnificent Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons for modern solid functional iconography -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0a231c',     // Deep luxurious forest emerald
+                            emerald: '#0f5132',  // Classical calming emerald
+                            gold: '#c5a880',     // Premium champagne matte gold
+                            goldDark: '#a3845b', // Rich metallic gold shade
+                            light: '#faf8f5',    // Premium alabaster clean off-white
+                            cardBg: '#ffffff',   // Clean card canvas
+                        }
+                    },
+                    fontFamily: {
+                        tajawal: ['Tajawal', 'sans-serif'],
+                        sans: ['Inter', 'Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #faf8f5;
+            scroll-behavior: smooth;
+        }
+        /* Elegant minimalist custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #faf8f5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c5a880;
+            border-radius: 10px;
+        }
+        .shimmer {
+            background: linear-gradient(90deg, #f3f3f3 25%, #e2e2e2 50%, #f3f3f3 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        /* Active nav styling indicator */
+        .nav-active {
+            color: #0f5132 !important;
+            border-bottom: 2px solid #c5a880;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="text-slate-800 flex flex-col min-h-screen selection:bg-brand-gold selection:text-brand-dark antialiased">
+
+    <!-- Spacious & Glassy Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-40 border-b border-stone-100 transition duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            
+            <!-- Branding / Logo Area -->
+            <div class="flex items-center gap-4 cursor-pointer" onclick="switchTab('main')">
+                <div class="w-12 h-12 bg-brand-emerald rounded-2xl flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-mosque text-brand-gold text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-black text-brand-dark tracking-tight">مؤسسة مَنَارَات الدولية</h1>
+                    <p class="text-[11px] text-stone-500 font-medium tracking-wide">للعمل الخيري والتنمية • إسطنبول، تركيا</p>
+                </div>
+            </div>
+
+            <!-- Spacious Premium Navigation -->
+            <nav class="flex flex-wrap items-center justify-center gap-1 md:gap-2">
+                <button onclick="switchTab('main')" id="nav-main" class="px-4 py-2 text-stone-600 hover:text-brand-emerald text-sm font-semibold transition duration-200 nav-active">الرئيسية</button>
+                <button onclick="switchTab('projects')" id="nav-projects" class="px-4 py-2 text-stone-600 hover:text-brand-emerald text-sm font-semibold transition duration-200">المشاريع والمبادرات</button>
+                <button onclick="switchTab('evaluate')" id="nav-evaluate" class="px-4 py-2 text-stone-600 hover:text-brand-emerald text-sm font-semibold transition duration-200 flex items-center gap-1.5"><i class="fa-solid fa-circle-plus text-[11px] text-brand-gold"></i> طلب تقييم ودعم حالة</button>
+                <button onclick="switchTab('about')" id="nav-about" class="px-4 py-2 text-stone-600 hover:text-brand-emerald text-sm font-semibold transition duration-200">من نحن</button>
+                <button onclick="switchTab('dashboard')" id="nav-dashboard" class="px-4 py-2 bg-brand-emerald/5 text-brand-emerald rounded-xl text-sm font-bold hover:bg-brand-emerald hover:text-white transition duration-200 flex items-center gap-1.5"><i class="fa-solid fa-screwdriver-wrench text-xs"></i> الإدارة الميدانية</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Body -->
+    <main class="flex-grow">
+
+        <!-- ==================== TAB: MAIN (HOME) ==================== -->
+        <section id="tab-main" class="space-y-20 py-12 md:py-20 max-w-7xl mx-auto px-6">
+            
+            <!-- Spacious Minimal Hero Banner -->
+            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-dark to-brand-emerald text-white p-8 md:p-20 shadow-xl border border-brand-emerald/10">
+                <div class="absolute inset-0 opacity-5 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x500/033/fff?text=Manarat+International+Sujood');"></div>
+                <div class="relative z-10 max-w-4xl space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-gold/10 border border-brand-gold/30 rounded-full text-brand-gold text-xs font-semibold">
+                        <i class="fa-solid fa-globe"></i> نعمل في اليمن وسوريا ودول إفريقيا وأمريكا الجنوبية
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                        إعمار الأرض بالبناء والترميم <br>
+                        <span class="text-brand-gold">لتبقي منارات التوحيد قائمة</span>
+                    </h2>
+                    <p class="text-stone-300 text-base md:text-lg leading-relaxed max-w-2xl font-light">
+                        من قلب إسطنبول، ننطلق بمؤسسة "منارات" الدولية للعمل الخيري والتنمية لتوفير بنية تنموية وشرعية للمجتمعات والأقليات المسلمة حول العالم. نجمع بين دقة الحوكمة الهندسية، والشفافية المالية المطلقة لضمان استدامة بيوت الله وإشراك المجتمعات في نهضتها.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button onclick="switchTab('projects')" class="bg-gradient-to-r from-brand-gold to-brand-goldDark text-brand-dark font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-0.5 flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-hand-holding-heart"></i> تصفح مشاريع الدعم والترميم
+                        </button>
+                        <button onclick="switchTab('evaluate')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-4 rounded-xl transition duration-300 flex items-center gap-2 text-sm">
+                            <i class="fa-solid fa-file-pen"></i> اطلب تقييم حالة أو مبادرة أهليّة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Three Pillars of Scope of Work -->
+            <div class="space-y-8">
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <h3 class="text-2xl md:text-3xl font-black text-brand-dark">ركائز ومسارات عملنا في إعمار المساجد</h3>
+                    <p class="text-stone-500 text-sm leading-relaxed">لا يقتصر عمل منارات على البناء التقليدي من الصفر، بل نمتد لترميم المنشآت المتضررة وتمكين المبادرات المجتمعية المتعثرة حفاظاً على تماسك وخدمة بيوت الله.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
+                    <!-- Pillar 1 -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm space-y-5 hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 bg-brand-emerald/5 rounded-2xl flex items-center justify-center text-brand-emerald text-2xl">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-dark">1. البناء والتأسيس الكامل</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            ندرس احتياج القرى النائية وشحيحة الإمكانيات، لنشيد مساجد متكاملة وجديدة كلياً وفق تصاميم هندسية حديثة صديقة للبيئة تشمل الطاقة النظيفة ومرافق المياه الأساسية.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm space-y-5 hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 bg-brand-gold/10 rounded-2xl flex items-center justify-center text-brand-goldDark text-2xl">
+                            <i class="fa-solid fa-paint-roller"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-dark">2. الترميم وإعادة الإعمار والتأهيل</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            نوجه التدخلات العاجلة للمساجد المتضررة والمدمرة بفعل الحروب والأزمات (خاصة في سوريا واليمن)، بالإضافة إلى المساجد التاريخية المتهالكة التي تحتاج تدعيم وحفظاً لهويتها الإنشائية.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm space-y-5 hover:shadow-md transition duration-300">
+                        <div class="w-14 h-14 bg-blue-500/5 rounded-2xl flex items-center justify-center text-blue-600 text-2xl">
+                            <i class="fa-solid fa-people-holding"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-brand-dark">3. دعم وتمكين المبادرات المجتمعية</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">
+                            عندما يبدأ الأهالي المحليون ببناء مسجدهم بالجهود الذاتية ثم يعجزون عن إكماله لضعف الإمكانيات، تتدخل منارات بموجب شراكة حوكمة دقيقة لتمويل وإتمام البناء وسقف المسجد وتأثيثه.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Key Performance Counters (Large and Airy) -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 text-center space-y-2">
+                    <span id="stat-completed" class="text-4xl md:text-5xl font-black text-brand-emerald block">148</span>
+                    <span class="text-xs text-stone-400 font-bold tracking-wider uppercase">مشاريع تم افتتاحها وتسليمها</span>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 text-center space-y-2">
+                    <span id="stat-active" class="text-4xl md:text-5xl font-black text-brand-goldDark block">39</span>
+                    <span class="text-xs text-stone-400 font-bold tracking-wider uppercase">تحت التنفيذ والترميم الفعلي</span>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 text-center space-y-2">
+                    <span id="stat-pending" class="text-4xl md:text-5xl font-black text-stone-600 block">15</span>
+                    <span class="text-xs text-stone-400 font-bold tracking-wider uppercase">حالات جاهزة مصادق عليها</span>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-100 text-center space-y-2">
+                    <span id="stat-countries" class="text-4xl md:text-5xl font-black text-brand-dark block">9</span>
+                    <span class="text-xs text-stone-400 font-bold tracking-wider uppercase">دول مغطاة عالمياً</span>
+                </div>
+            </div>
+
+            <!-- Geographical Focus Detail (Factual representation) -->
+            <div class="space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <h3 class="text-2xl font-bold text-brand-dark">التركيز الجغرافي والسياسات الميدانية</h3>
+                    <p class="text-stone-500 text-xs leading-relaxed">نوزع جغرافيتنا بموضوعية عالية تضمن التدخل في المناطق الأكثر احتياجاً والأكثر أماناً من الناحية القانونية والإنشائية.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Syria Block -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-100 flex flex-col md:flex-row gap-6 items-start">
+                        <span class="text-4xl p-4 bg-stone-50 rounded-2xl shrink-0">🇸🇾</span>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-brand-dark text-lg">سوريا (مشاريع إعادة الإعمار والترميم)</h4>
+                            <p class="text-xs text-stone-500 leading-relaxed">
+                                بعد سنوات من تأثر البنية التحتية، نعمل حالياً على استعادة الحياة للمساجد المتضررة والمدمرة كلياً أو جزئياً في المناطق السكنية المستقرة بمحافظات حلب وإدلب وريف حماة وحمص، لمساعدة العائدين على الاستقرار والنشاط التنموي. كما نستبدل المصليات الطينية والخيامية بمبانٍ معزولة ومستدامة.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Yemen Block -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-100 flex flex-col md:flex-row gap-6 items-start">
+                        <span class="text-4xl p-4 bg-stone-50 rounded-2xl shrink-0">🇾🇪</span>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-brand-dark text-lg">اليمن (أرياف تعز ولحج وحضرموت والحديدة)</h4>
+                            <p class="text-xs text-stone-500 leading-relaxed">
+                                نركز في اليمن على حل المشاكل التراكمية للبنية التحتية. حيث نقوم ببناء مساجد مجهزة بالكامل بوحدات توليد طاقة شمسية مستقلة لحل معضلة انقطاع الكهرباء، ونربطها دائماً بحفر آبار مياه صالحة للشرب تخدم المساجد والقرية المحيطة بها بالكامل كأثر مضاعف.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Africa Block -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-100 flex flex-col md:flex-row gap-6 items-start">
+                        <span class="text-4xl p-4 bg-stone-50 rounded-2xl shrink-0">🌍</span>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-brand-dark text-lg">وسط وغرب إفريقيا (النيجر، تشاد، الكاميرون)</h4>
+                            <p class="text-xs text-stone-500 leading-relaxed">
+                                نعمل على عمارة مساجد إسمنتية مسلحة تدوم لعشرات السنين في القرى ذات الكثافات السكانية العالية التي تفتقر للمنشآت الخدمية، مع إلحاقها بنظام حفر آبار ارتوازية عميقة لمكافحة الجفاف والأمراض المنقولة عبر المياه الملوثة للأهالي.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- South America Block -->
+                    <div class="bg-white p-8 rounded-3xl border border-stone-100 flex flex-col md:flex-row gap-6 items-start">
+                        <span class="text-4xl p-4 bg-stone-50 rounded-2xl shrink-0">🌎</span>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-brand-dark text-lg">أمريكا الجنوبية والأقليات (البرازيل وضواحيها)</h4>
+                            <p class="text-xs text-stone-500 leading-relaxed">
+                                نقوم بإنشاء مصليات ومراكز إرشادية وتأهيلية ملحقة بالمساجد لرعاية الأقليات المسلمة والعائلات المهاجرة وتوفير قاعات لتعليم اللغة العربية وتحفيظ القرآن للحفاظ على الهوية الوطنية والإسلامية للأجيال الشابة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transparency & Governance Framework Banner (Clean & Luxurious) -->
+            <div class="bg-brand-dark text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+                    <div class="space-y-2">
+                        <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-gold mb-2"><i class="fa-solid fa-file-shield"></i></span>
+                        <h4 class="font-bold text-brand-gold text-base">خلو تام من النزاعات والملكيات العشوائية</h4>
+                        <p class="text-[11px] text-stone-300 leading-relaxed">نلتزم بفحص الأثر القانوني لقطعة الأرض والتأكد التام من خلوها من أي نزاع قبلي أو قضائي، وتوثيق صك الملكية أو الوقفية الشرعية قبل وضع لبنة واحدة.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-gold mb-2"><i class="fa-solid fa-chart-line"></i></span>
+                        <h4 class="font-bold text-brand-gold text-base">الحسابات والتحويلات الخاضعة للتدقيق الدولي</h4>
+                        <p class="text-[11px] text-stone-300 leading-relaxed">تتم كافة التحويلات وصرف النفقات للمقاولين بموجب دفعات مشروطة بنسب الإنجاز الفني المعتمدة من مهندسي المؤسسة، وتحت مراقبة مالية دورية.</p>
+                    </div>
+                    <div class="space-y-2">
+                        <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-gold mb-2"><i class="fa-solid fa-handshake-angle"></i></span>
+                        <h4 class="font-bold text-brand-gold text-base">مبدأ استدامة الأثر (الوقفية المستقلة)</h4>
+                        <p class="text-[11px] text-stone-300 leading-relaxed">نحرص على ربط المساجد فور افتتاحها بوزارات الأوقاف المحلية وتدشين صناديق أوقاف صغيرة (دكاكين، بئر ماء تجاري) لتأمين تكاليف الصيانة ورواتب الطاقم.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ==================== TAB: PROJECTS ==================== -->
+        <section id="tab-projects" class="hidden py-12 md:py-20 max-w-7xl mx-auto px-6 space-y-12">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <h2 class="text-3xl md:text-4xl font-black text-brand-dark">دليل الحالات والفرص التنموية للمساجد</h2>
+                <p class="text-stone-500 text-sm leading-relaxed">نعرض لك بشفافية تامة كافة الحالات المدروسة ميدانياً والمصادق عليها من اللجنة الهندسية والشرعية لمؤسسة "منارات". تبرعك أو دعمك يحدث أثراً فورياً.</p>
+            </div>
+
+            <!-- Categories & Filters -->
+            <div class="flex justify-center border-b border-stone-200">
+                <div class="flex gap-4 md:gap-8 overflow-x-auto pb-px">
+                    <button onclick="filterProjects('ready')" id="proj-tab-ready" class="pb-3 px-2 text-brand-emerald font-bold border-b-2 border-brand-gold text-sm transition">
+                        حالات ومبادرات تنتظر الدعم <span id="badge-ready" class="bg-brand-emerald text-white text-[10px] px-2 py-0.5 rounded-full font-bold ml-1">4</span>
+                    </button>
+                    <button onclick="filterProjects('progress')" id="proj-tab-progress" class="pb-3 px-2 text-stone-500 hover:text-brand-emerald text-sm transition font-medium">
+                        مشاريع قيد التنفيذ والترميم الفعلي <span id="badge-progress" class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded-full font-bold ml-1">2</span>
+                    </button>
+                    <button onclick="filterProjects('done')" id="proj-tab-done" class="pb-3 px-2 text-stone-500 hover:text-brand-emerald text-sm transition font-medium">
+                        مشاريع منجزة ومفتتحة بالكامل <span id="badge-done" class="bg-stone-100 text-stone-700 text-[10px] px-2 py-0.5 rounded-full font-bold ml-1">2</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Projects Grid (Spacious Cards) -->
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </section>
+
+
+        <!-- ==================== TAB: EVALUATION (WIZARD FORM) ==================== -->
+        <section id="tab-evaluate" class="hidden py-12 md:py-20 max-w-5xl mx-auto px-6 space-y-12">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <h2 class="text-3xl md:text-4xl font-black text-brand-dark">طلب دراسة وتقييم حالة ميدانية</h2>
+                <p class="text-stone-500 text-sm leading-relaxed">
+                    إذا كنت باحثاً ميدانياً، أو ممثلاً لمبادرة مجتمعية محلية، يرجى ملء الاستبيان التفصيلي التالي. تلتزم مؤسسة منارات بفلترة وتحليل هذه البيانات جغرافياً وشرعياً لتقرير إمكانية التدخل والتمويل.
+                </p>
+            </div>
+
+            <!-- Form Wizard Container -->
+            <div class="bg-white rounded-3xl shadow-sm border border-stone-100 overflow-hidden">
+                <!-- Wizard Header Progress -->
+                <div class="bg-brand-dark text-white px-8 py-6 border-b border-brand-emerald flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <span id="wizard-step-num" class="w-10 h-10 rounded-2xl bg-brand-gold text-brand-dark flex items-center justify-center font-black text-lg">1</span>
+                        <div>
+                            <h3 id="wizard-step-title" class="font-bold text-brand-gold text-base">الخطوة الأولى: البيانات الأساسية للباحث والموقع</h3>
+                            <p id="wizard-step-desc" class="text-stone-400 text-xs">جمع بيانات التواصل الدقيقة والإحداثيات الجغرافية</p>
+                        </div>
+                    </div>
+                    <span class="text-xs text-brand-gold/60 hidden md:inline">منظومة حوكمة منارات الدولية</span>
+                </div>
+
+                <!-- Form Content Space -->
+                <form id="evaluation-wizard-form" onsubmit="handleWizardSubmit(event)" class="p-8 md:p-12 space-y-8">
+                    
+                    <!-- Step 1: Basic Info -->
+                    <div id="form-step-1" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">اسم الباحث الميداني أو ممثل الجهة المبادرة <span class="text-red-500">*</span></label>
+                                <input type="text" id="eval-name" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">رقم التواصل الهاتفي (مع كود الدولة - واتساب مفعل) <span class="text-red-500">*</span></label>
+                                <input type="tel" id="eval-phone" required placeholder="مثال: 905550000000+" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">الدولة <span class="text-red-500">*</span></label>
+                                <select id="eval-country" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="">-- اختر الدولة --</option>
+                                    <option value="سوريا">سوريا (مشاريع ترميم وإعمار)</option>
+                                    <option value="اليمن">اليمن (بنية تحتية وطاقة ومياه)</option>
+                                    <option value="النيجر">النيجر (غرب إفريقيا)</option>
+                                    <option value="تشاد">تشاد (وسط إفريقيا)</option>
+                                    <option value="البرازيل">البرازيل (أقليات أمريكا الجنوبية)</option>
+                                    <option value="أخرى">دولة أخرى</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">المحافظة / الإقليم <span class="text-red-500">*</span></label>
+                                <input type="text" id="eval-state" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">القرية / الحي السكني <span class="text-red-500">*</span></label>
+                                <input type="text" id="eval-village" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">إحداثيات الموقع الدقيقة (GPS Coordinates) <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <input type="text" id="eval-gps" required placeholder="خط الطول ، خط العرض" class="w-full pl-36 pr-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <button type="button" onclick="getLocation()" class="absolute left-2 top-2 bg-brand-emerald text-white hover:bg-brand-gold hover:text-brand-dark px-3 py-1.5 rounded-lg text-[10px] font-bold transition">
+                                        <i class="fa-solid fa-location-crosshairs"></i> تحديد موقعي التلقائي
+                                    </button>
+                                </div>
+                                <p class="text-[10px] text-stone-400 mt-1">تحديد الإحداثيات يمنع تداخل المساعدات ويضمن توثيق النطاق الجغرافي للمتبرع.</p>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">طبيعة الطريق الموصل للموقع <span class="text-red-500">*</span></label>
+                                <select id="eval-road" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="طريق معبد">طريق معبد بالكامل (إسفلت)</option>
+                                    <option value="طريق ترابي">طريق ترابي ممهد</option>
+                                    <option value="طريق وعر">طريق وعر جداً (صعوبة في وصول الشاحنات)</option>
+                                    <option value="جبلي منحدر">منحدرات جبلية شديدة الوعورة والخطورة</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Need & Demographics -->
+                    <div id="form-step-2" class="hidden space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">طبيعة التدخل المطلوب بالموقع <span class="text-red-500">*</span></label>
+                                <select id="eval-intervention-type" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="بناء وتأسيس من الصفر">بناء وتأسيس من الصفر</option>
+                                    <option value="ترميم وتأهيل مسجد متضرر">ترميم وتأهيل مسجد متضرر / تاريخي</option>
+                                    <option value="دعم وإتمام مبادرة أهليّة">دعم وإتمام مبادرة أهليّة متعثرة</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">عدد سكان المنطقة المستفيدة (نسمة) <span class="text-red-500">*</span></label>
+                                <input type="number" id="eval-population" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">نسبة المسلمين بالمنطقة <span class="text-red-500">*</span></label>
+                                <select id="eval-muslim-ratio" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="100%">100% مسلمين</option>
+                                    <option value="أغلبية">أغلبية واضحة (أكثر من 80%)</option>
+                                    <option value="متساو">متساوٍ مع ديانات أخرى</option>
+                                    <option value="أقلية">أقلية دينية</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">المسافة لأقرب مسجد أو مصلى (كم) <span class="text-red-500">*</span></label>
+                                <input type="number" step="0.1" id="eval-distance" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">الوقت المستغرق مشياً للوصول للمسجد <span class="text-red-500">*</span></label>
+                                <input type="number" id="eval-walktime" required placeholder="بالدقائق" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">الوضع الإنشائي الراهن للمسجد المستهدف <span class="text-red-500">*</span></label>
+                                <select id="eval-current-status" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="لا يوجد مصلى حالي">لا يوجد مصلى حالي (الصلاة في العراء)</option>
+                                    <option value="مصلى قش وخشب متهالك">مصلى قش وخشب متهالك وغير آمن</option>
+                                    <option value="مسجد مدمر بشكل جزئي">مسجد مدمر بشكل جزئي ويحتاج ترميم هيكلي</option>
+                                    <option value="مسجد قديم متصدع جداً">مسجد قديم متصدع جداً وآيل للسقوط تلقائياً</option>
+                                    <option value="هيكل مبادرة متعثرة غير مسقوفة">هيكل مبادرة متعثرة بنى الأهالي جدرانها دون سقف</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-3">عوائق جغرافية تمنع بلوغ المساجد القائمة بالمنطقة</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <label class="flex items-center gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:bg-stone-100 transition">
+                                    <input type="checkbox" id="eval-ob-flood" class="text-brand-emerald focus:ring-brand-emerald h-4 w-4 rounded">
+                                    <span class="text-xs font-semibold text-stone-700">مجاري وممرات السيول الموسمية</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:bg-stone-100 transition">
+                                    <input type="checkbox" id="eval-ob-mount" class="text-brand-emerald focus:ring-brand-emerald h-4 w-4 rounded">
+                                    <span class="text-xs font-semibold text-stone-700">المرتفعات والوهاد السحيقة</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:bg-stone-100 transition">
+                                    <input type="checkbox" id="eval-ob-none" class="text-brand-emerald focus:ring-brand-emerald h-4 w-4 rounded">
+                                    <span class="text-xs font-semibold text-stone-700">لا توجد عوائق جغرافية</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Legal & Technical Parameters -->
+                    <div id="form-step-3" class="hidden space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">الحالة القانونية للملكية أو الحيازة الشرعية للأرض <span class="text-red-500">*</span></label>
+                                <select id="eval-land-ownership" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="أرض وقف مسجلة">أرض وقف رسمي مقيد في السجل العقاري للأوقاف</option>
+                                    <option value="تبرع موثق بموجب تنازل">تبرع موثق بموجب تنازل وتنازل شرعي أهلي</option>
+                                    <option value="تخصيص من الإدارة المحلية">قرار تخصيص معتمد من البلدية أو المجلس المحلي</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">هل الأرض آمنة وخالية تماماً من النزاعات القضائية أو العشائرية؟ <span class="text-red-500">*</span></label>
+                                <select id="eval-no-conflict" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="نعم">نعم، الأرض آمنة وخالية ومستقرة تماماً</option>
+                                    <option value="لا">لا، هناك قضايا أو نزاعات عائلية مستمرة (تعليق تلقائي)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">المساحة الكلية للأرض المخصصة (متر مربع) <span class="text-red-500">*</span></label>
+                                <input type="number" id="eval-land-area" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">المساحة المستهدف بناؤها أو ترميمها فقط (متر مربع) <span class="text-red-500">*</span></label>
+                                <input type="number" id="eval-build-area" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">طبيعة الأرض جيولوجياً وسند التأسيس <span class="text-red-500">*</span></label>
+                                <select id="eval-geo" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="صخرية صلبة">صخرية مستقرة ومتماسكة</option>
+                                    <option value="رملية">رملية ناعمة (تتطلب حفر عميق وصبة حزام)</option>
+                                    <option value="طينية">طينية زراعية (تتطلب استبدال تربة)</option>
+                                    <option value="منحدر جبلي">منحدر جبلي (تتطلب جدار استنادي وجرافة)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">مصدر المياه المستقبلي المتوفر للموقع <span class="text-red-500">*</span></label>
+                                <select id="eval-water" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="شبكة مياه عامة">شبكة عمومية حكومية ممتدة</option>
+                                    <option value="بئر جوفي قريب">بئر مائي قريب جداً من الأرض</option>
+                                    <option value="يتطلب حفر بئر">لا يوجد (المشروع يتطلب حفر بئر طاقة نظيفة)</option>
+                                    <option value="صهاريج مياه">توريد صهاريج مائية أهلية بانتظام</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wide mb-2">الشبكة الكهربائية المتوفرة للموقع <span class="text-red-500">*</span></label>
+                                <select id="eval-electricity" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-emerald text-sm text-stone-800 bg-stone-50/50">
+                                    <option value="شبكة كهرباء عامة">شبكة حكومية عامة متواصلة</option>
+                                    <option value="شبكة متقطعة">شبكة محلية متهالكة متقطعة</option>
+                                    <option value="يتطلب طاقة شمسية">منعدمة تماماً (المشروع يتطلب تزويد طاقة شمسية)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Documents Upload & Declarations -->
+                    <div id="form-step-4" class="hidden space-y-6">
+                        <div class="p-6 bg-brand-light border border-brand-gold/20 rounded-2xl flex gap-4 text-brand-dark">
+                            <i class="fa-solid fa-circle-info text-2xl text-brand-gold shrink-0 mt-1"></i>
+                            <div class="text-xs space-y-2">
+                                <h4 class="font-black">ملاحظة حوكمة هامة:</h4>
+                                <p class="leading-relaxed">
+                                    ترسخ مؤسسة منارات مبادئ الشفافية والمسؤولية الكاملة. رفع صور من صك الأرض ومحاضر الاتفاق يسرع عملية الموافقة المالية من مجلس الأمناء في إسطنبول. يرجى إرفاق صور ومستندات تجريبية أو محاكاة لتنشيط المعاينة الفورية للطلب على منصة المراجعة.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="border-2 border-dashed border-stone-200 hover:border-brand-gold rounded-2xl p-8 text-center transition cursor-pointer relative bg-stone-50/20">
+                                <input type="file" id="eval-file-proof" class="absolute inset-0 opacity-0 cursor-pointer" onchange="updateFileLabel('eval-file-proof-label', this)">
+                                <i class="fa-solid fa-shield-halved text-4xl text-stone-400 mb-3"></i>
+                                <span id="eval-file-proof-label" class="block text-xs font-bold text-stone-700">ارفع صك الملكية، سند الوقفية أو وثيقة التنازل الشرعي (PDF)</span>
+                                <span class="text-[10px] text-stone-400 mt-1 block">الحد الأقصى: 15 ميجابايت</span>
+                            </div>
+                            <div class="border-2 border-dashed border-stone-200 hover:border-brand-gold rounded-2xl p-8 text-center transition cursor-pointer relative bg-stone-50/20">
+                                <input type="file" id="eval-file-letter" class="absolute inset-0 opacity-0 cursor-pointer" onchange="updateFileLabel('eval-file-letter-label', this)">
+                                <i class="fa-solid fa-file-contract text-4xl text-stone-400 mb-3"></i>
+                                <span id="eval-file-letter-label" class="block text-xs font-bold text-stone-700">ارفع وثيقة الطلب أو التأييد الصادر عن الأوقاف أو الإدارة المحلية</span>
+                                <span class="text-[10px] text-stone-400 mt-1 block">الحد الأقصى: 10 ميجابايت</span>
+                            </div>
+                        </div>
+
+                        <div class="border-2 border-dashed border-stone-200 hover:border-brand-gold rounded-2xl p-8 text-center transition cursor-pointer relative bg-stone-50/20">
+                            <input type="file" id="eval-file-photos" class="absolute inset-0 opacity-0 cursor-pointer" onchange="updateFileLabel('eval-file-photos-label', this)">
+                            <i class="fa-solid fa-images text-4xl text-stone-400 mb-3"></i>
+                            <span id="eval-file-photos-label" class="block text-xs font-bold text-stone-700">ارفع ملفاً مضغوطاً لصور الأرض الحالية وفيديو 360 درجة لموقع البناء المقترح</span>
+                            <span class="text-[10px] text-stone-400 mt-1 block">الحد الأقصى للتسجيل: 50 ميجابايت</span>
+                        </div>
+
+                        <label class="flex items-start gap-4 p-6 bg-brand-light border border-brand-gold/10 rounded-2xl cursor-pointer hover:bg-white transition">
+                            <input type="checkbox" id="eval-agreement" required class="mt-1 h-5 w-5 text-brand-emerald focus:ring-brand-emerald rounded border-stone-300">
+                            <span class="text-xs text-stone-600 font-medium leading-relaxed">
+                                ألتزم أنا جامع البيانات وممثل المبادرة بأنني وقفت على الأرض عياناً وشرعاً، وأقر بأن كافة المعلومات، الأرقام الديموغرافية، التوثيقات والمرفقات المدونة بالطلب مطابقة تماماً للموقع الحقيقي وبأننا نتحمل كامل المسؤولية الفنية والشرعية عن أي قصور أو إغفال للحقائق.
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Wizard Control Buttons -->
+                    <div class="flex justify-between items-center pt-6 border-t border-stone-100">
+                        <button type="button" id="wizard-prev-btn" onclick="wizardPrev()" class="hidden bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold px-8 py-3.5 rounded-xl transition duration-200 text-sm">
+                            السابق
+                        </button>
+                        <div class="flex-grow"></div>
+                        <button type="button" id="wizard-next-btn" onclick="wizardNext()" class="bg-brand-emerald hover:bg-brand-emerald/90 text-white font-bold px-10 py-3.5 rounded-xl transition duration-200 text-sm">
+                            التالي
+                        </button>
+                        <button type="submit" id="wizard-submit-btn" class="hidden bg-gradient-to-r from-brand-gold to-brand-goldDark text-brand-dark font-black px-10 py-3.5 rounded-xl transition duration-200 shadow-lg text-sm">
+                            إرسال الطلب وإصدار كود المتابعة
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ==================== TAB: ABOUT US ==================== -->
+        <section id="tab-about" class="hidden py-12 md:py-20 max-w-7xl mx-auto px-6 space-y-16">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <span class="bg-brand-gold/10 text-brand-goldDark text-xs px-4 py-1.5 rounded-full font-bold">بوابة إسطنبول العالمية للعمل الخيري</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-brand-dark leading-tight">عمارة وتأهيل بيوت الله برؤية حضارية وأثر تنموي دائم</h2>
+                    <p class="text-stone-600 leading-relaxed text-sm md:text-base">
+                        تأسست **مؤسسة منارات الدولية للعمل الخيري والتنمية** في تركيا ككيان قانوني مرخص ومستقل، بهدف رأب الفجوات الخدمية والتنموية في الأقاليم والمناطق التي دمرتها النزاعات أو عزلها الفقر والجهل. 
+                    </p>
+                    <p class="text-stone-500 leading-relaxed text-xs md:text-sm">
+                        إننا نرى في عمارة المساجد أو ترميمها أو دعم المبادرات الأهلية لإكمالها فرصة لإحياء مجتمعات متكاملة ومستدامة مجهزة بالتعليم النظيف، مصادر الطاقة البديلة، وإمدادات المياه الصالحة للشرب لإنقاذ حياة الناس وبناء مجتمع مترابط فكرياً واجتماعياً.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                        <div class="p-6 bg-white rounded-2xl border border-stone-100">
+                            <span class="font-bold text-brand-emerald block mb-1 text-sm">الرؤية الاستراتيجية</span>
+                            <span class="text-xs text-stone-500 leading-relaxed">بناء، إعمار، وترميم المساجد بمعايير فنية عالية وبنية تشغيلية تضمن الاكتفاء المالي التام.</span>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl border border-stone-100">
+                            <span class="font-bold text-brand-goldDark block mb-1 text-sm">الحوكمة القانونية والمالية</span>
+                            <span class="text-xs text-stone-500 leading-relaxed">تحويلات خاضعة للتدقيق المالي الصارم لضمان وصول أموال التبرعات لمواقعها الحقيقية.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-brand-gold/10 to-brand-emerald/10 rounded-3xl blur-xl"></div>
+                    <img src="https://placehold.co/600x450/0b231c/fff?text=Manarat+Istanbul+Headquarters" alt="مقر منارات الدولي في إسطنبول" class="relative rounded-3xl shadow-lg w-full object-cover border border-stone-200">
+                </div>
+            </div>
+
+            <!-- Board of Governance and Scholars -->
+            <div class="bg-white rounded-3xl p-8 md:p-12 border border-stone-100 space-y-8">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <h3 class="text-2xl font-bold text-brand-dark">مجلس التدقيق والمصادقة الميدانية</h3>
+                    <p class="text-stone-500 text-xs">نخبة من العلماء، المهندسين المعماريين، والخبراء في النظم اللوجستية لإدارة المشاريع</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Member 1 -->
+                    <div class="text-center p-6 space-y-4">
+                        <div class="w-16 h-16 bg-brand-emerald/5 rounded-2xl mx-auto flex items-center justify-center text-brand-emerald text-2xl">
+                            <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                        </div>
+                        <h4 class="font-bold text-stone-800 text-base">اللجنة الشرعية القانونية</h4>
+                        <p class="text-[11px] text-stone-500 leading-relaxed">تتولى التحقق والتدقيق من مستندات الملكية والوقفية الشرعية لقطع الأراضي المرفوعة، والتحقق التام من حوكمتها منعاً لأي إشكالات محلية.</p>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="text-center p-6 space-y-4">
+                        <div class="w-16 h-16 bg-brand-gold/10 rounded-2xl mx-auto flex items-center justify-center text-brand-goldDark text-2xl">
+                            <i class="fa-solid fa-hard-hat"></i>
+                        </div>
+                        <h4 class="font-bold text-stone-800 text-base">المكتب الهندسي والإنشائي</h4>
+                        <p class="text-[11px] text-stone-500 leading-relaxed">يتولى مراجعة وتحديث المخططات المعمارية المرفوعة، إقرار ميزانيات البناء، إجراء حسابات الهيكل الخرساني والترميم ومراجعة كفاءة التأسيس.</p>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="text-center p-6 space-y-4">
+                        <div class="w-16 h-16 bg-blue-500/5 rounded-2xl mx-auto flex items-center justify-center text-blue-600 text-2xl">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h4 class="font-bold text-stone-800 text-base">دائرة الرقابة المالية والتدقيق</h4>
+                        <p class="text-[11px] text-stone-500 leading-relaxed">تطبيق معايير التدقيق المالي من خلال تحويل النفقات والتكاليف على دفعات مرتبطة بمحاضر استلام الإنجاز الإنشائي الموثق من الميدان.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== TAB: FIELD DASHBOARD ==================== -->
+        <section id="tab-dashboard" class="hidden py-12 md:py-20 max-w-7xl mx-auto px-6 space-y-12">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <span class="bg-brand-emerald/10 text-brand-emerald text-xs px-4 py-1.5 rounded-full font-bold">بوابة المراقبة الفنية والمتابعة الحية</span>
+                <h2 class="text-3xl md:text-4xl font-black text-brand-dark">لوحة التحكم والمصادقة الميدانية</h2>
+                <p class="text-stone-500 text-sm leading-relaxed">لوحة تفاعلية حية لمحاكاة قرارات الإدارة ومراجعة ومعاينة المشاريع وتفاصيل المستندات والمصادقة على صرف الميزانيات من قبل المؤسسة.</p>
+            </div>
+
+            <!-- Stats dashboard metrics -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-stone-100 flex items-center gap-4">
+                    <span class="w-12 h-12 bg-amber-50 rounded-xl text-amber-600 flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-file-invoice"></i></span>
+                    <div>
+                        <span id="dashboard-pending-count" class="text-2xl font-black block text-brand-dark">2</span>
+                        <span class="text-xs text-stone-400 font-semibold">طلبات جديدة ومبادرات قيد المراجعة</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-stone-100 flex items-center gap-4">
+                    <span class="w-12 h-12 bg-brand-emerald/5 rounded-xl text-brand-emerald flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-arrows-spin"></i></span>
+                    <div>
+                        <span id="dashboard-active-count" class="text-2xl font-black block text-brand-dark">2</span>
+                        <span class="text-xs text-stone-400 font-semibold">مشاريع في الميدان قيد البناء والترميم</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-stone-100 flex items-center gap-4">
+                    <span class="w-12 h-12 bg-blue-50 rounded-xl text-blue-600 flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-handshake-angle"></i></span>
+                    <div>
+                        <span class="text-2xl font-black block text-brand-dark">100%</span>
+                        <span class="text-xs text-stone-400 font-semibold">حوكمة ومصادقة مستندية معلنة</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Cases List -->
+                <div class="lg:col-span-1 bg-white rounded-3xl p-6 border border-stone-100 space-y-4">
+                    <h3 class="font-bold text-brand-dark text-base border-b pb-3"><i class="fa-solid fa-list-check text-brand-gold mr-1"></i> الطلبات والمبادرات الواردة</h3>
+                    <div id="dashboard-cases-list" class="space-y-3 max-h-[500px] overflow-y-auto">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+
+                <!-- Case Details Preview Panel -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 border border-stone-100 space-y-6">
+                    <h3 class="font-bold text-brand-dark text-base border-b pb-3"><i class="fa-solid fa-magnifying-glass-chart text-brand-gold mr-1"></i> وثيقة المراجعة والاعتماد الفني والمالي</h3>
+                    <div id="dashboard-case-detail" class="space-y-6">
+                        <!-- Loaded dynamically or shows placeholder -->
+                        <div class="text-center py-20 text-stone-400 space-y-2">
+                            <i class="fa-solid fa-folder-open text-4xl"></i>
+                            <p class="text-xs font-semibold">يرجى تحديد إحدى الحالات المرفوعة في القائمة الجانبية للمعاينة والمصادقة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Smart AI Agent Panel -->
+    <div class="fixed bottom-6 left-6 z-40">
+        <button onclick="toggleChat()" class="bg-brand-emerald text-white hover:bg-brand-gold hover:text-brand-dark p-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 flex items-center justify-center relative border border-brand-gold/30">
+            <i class="fa-solid fa-comment-dots text-2xl"></i>
+            <span class="absolute -top-1 -right-1 bg-red-500 text-white w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold animate-pulse">1</span>
+        </button>
+
+        <div id="manarat-chat-panel" class="hidden absolute bottom-16 left-0 w-80 md:w-96 bg-white rounded-3xl shadow-2xl border border-stone-200 overflow-hidden flex flex-col max-h-[500px]">
+            <!-- Header -->
+            <div class="bg-brand-dark text-white p-4 flex justify-between items-center border-b border-brand-gold/30">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 bg-brand-gold text-brand-dark rounded-full flex items-center justify-center text-xs"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <h4 class="font-bold text-xs md:text-sm text-brand-gold">مستشار منارات الذكي</h4>
+                        <p class="text-[10px] text-stone-400">يجيبك فوراً حول الحوكمة وشروط البناء والترميم</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-stone-300 hover:text-white"><i class="fa-solid fa-xmark text-sm"></i></button>
+            </div>
+
+            <!-- Messages Area -->
+            <div id="chat-messages-container" class="flex-grow p-4 overflow-y-auto space-y-3 bg-stone-50 text-xs min-h-[250px] max-h-[350px]">
+                <div class="bg-white p-3 rounded-2xl border border-stone-150 max-w-[85%] text-stone-800 space-y-1">
+                    <p class="font-semibold text-brand-emerald">مرحباً بك، أنا المستشار التنموي لمنارات 🕌</p>
+                    <p class="leading-relaxed text-stone-600">
+                        يسعدني إرشادك حول: شروط البناء والترميم، كيفية إعداد المبادرات الأهلية، الرقابة المالية في اليمن وسوريا، أو كيفية التحقق من أهليّة قطع الأراضي الوقفية.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Input area -->
+            <div class="p-3 bg-white border-t flex gap-2">
+                <input type="text" id="chat-user-input" onkeydown="handleChatKey(event)" placeholder="اكتب استفسارك هنا للذكاء الاصطناعي..." class="flex-grow px-3 py-2 rounded-xl border border-stone-200 focus:outline-none focus:ring-1 focus:ring-brand-emerald text-xs text-stone-800">
+                <button onclick="sendChatMessage()" class="bg-brand-emerald hover:bg-brand-gold hover:text-brand-dark text-white px-4 py-2 rounded-xl transition text-xs font-semibold shrink-0">إرسال</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals Framework (Donation / Case Inspection Overlay) -->
+    <div id="modal-container" class="hidden fixed inset-0 z-50 bg-brand-dark/40 flex items-center justify-center p-4 backdrop-blur-sm">
+        
+        <!-- Donation Modal Window -->
+        <div id="donation-modal" class="hidden bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl border border-stone-100 animate-fade-in">
+            <div class="bg-brand-dark text-white p-6 border-b border-brand-gold/30 flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-brand-gold text-lg">المساهمة في عمارة ودعم المسجد</h3>
+                    <p class="text-xs text-stone-400" id="donate-mosque-subtitle">كود الحالة: --</p>
+                </div>
+                <button onclick="closeModal()" class="text-stone-300 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            
+            <div class="p-8 space-y-6">
+                <div>
+                    <label class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-2">اختر أو اكتب مبلغ التبرع المقترح (بالدولار الأمريكي USD)</label>
+                    <div class="grid grid-cols-4 gap-3 mb-4">
+                        <button onclick="setDonationAmount(100)" class="py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-bold hover:bg-brand-gold hover:border-brand-gold text-stone-700 transition">100$</button>
+                        <button onclick="setDonationAmount(500)" class="py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-bold hover:bg-brand-gold hover:border-brand-gold text-stone-700 transition">500$</button>
+                        <button onclick="setDonationAmount(1000)" class="py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-bold hover:bg-brand-gold hover:border-brand-gold text-stone-700 transition">1000$</button>
+                        <button onclick="setDonationAmount(5000)" class="py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-xs font-bold hover:bg-brand-gold hover:border-brand-gold text-stone-700 transition">5000$</button>
+                    </div>
+                    <input type="number" id="custom-donation-input" placeholder="مبلغ مخصص آخر للحق التنموي" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:outline-none focus:ring-2 focus:ring-brand-gold text-stone-800 text-center font-bold text-lg">
+                </div>
+
+                <div class="space-y-3">
+                    <label class="block text-xs font-bold text-stone-500 uppercase tracking-wider">وسائل الدفع الحوكمية المقبولة</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="flex items-center gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:bg-stone-100 transition">
+                            <input type="radio" name="pay-method" checked class="text-brand-emerald focus:ring-brand-emerald">
+                            <span class="text-xs font-bold text-stone-700"><i class="fa-regular fa-credit-card text-stone-400 ml-1"></i> بطاقة ائتمانية</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-4 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:bg-stone-100 transition">
+                            <input type="radio" name="pay-method" class="text-brand-emerald focus:ring-brand-emerald">
+                            <span class="text-xs font-bold text-stone-700"><i class="fa-brands fa-paypal text-stone-400 ml-1"></i> حساب بايبال</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button onclick="processMockDonation()" class="w-full bg-brand-emerald hover:bg-brand-emerald/90 text-white font-black py-4 rounded-xl shadow-lg transition duration-200 text-sm">
+                    إجراء المساهمة الافتراضية الآن ورؤية الأثر
+                </button>
+            </div>
+        </div>
+
+        <!-- Success/Document Details Modal -->
+        <div id="success-modal" class="hidden bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl border border-stone-100 p-8 text-center space-y-6">
+            <div class="w-16 h-16 bg-brand-emerald/5 rounded-full flex items-center justify-center text-brand-emerald text-4xl mx-auto border border-brand-emerald/20">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="space-y-2">
+                <h3 id="success-modal-title" class="font-bold text-brand-dark text-xl">جُزيت خيراً وتقبل الله طاعتك</h3>
+                <p id="success-modal-body" class="text-stone-500 text-xs leading-relaxed">تم تسجيل المساهمة ببيانات المنظومة لتمويل هذا المسار التنموي، وسيتم توجيه تقارير الإنجاز دورياً لبريدك الإلكتروني.</p>
+            </div>
+
+            <!-- Receipt Detail Box -->
+            <div id="receipt-box" class="hidden bg-stone-50 rounded-2xl p-6 border border-stone-200 text-right text-xs space-y-3">
+                <div class="flex justify-between border-b pb-2 font-bold text-stone-400 uppercase tracking-wider"><span class="text-[10px]">وصل مساهمة حوكمي</span> <span id="receipt-date">--</span></div>
+                <div class="flex justify-between"><span>الجهة التنموية المعتمدة:</span> <span class="font-bold text-brand-dark">منارات الدولية للعمل الخيري</span></div>
+                <div class="flex justify-between"><span>المستفيد / اسم المشروع:</span> <span id="receipt-project-title" class="font-bold text-stone-700">--</span></div>
+                <div class="flex justify-between"><span>قيمة المساهمة:</span> <span id="receipt-amount" class="font-black text-brand-emerald text-sm">--</span></div>
+            </div>
+
+            <button onclick="closeModal()" class="w-full bg-brand-dark hover:bg-brand-emerald text-white font-bold py-3.5 rounded-xl transition duration-200 text-sm">
+                إغلاق النافذة والعودة للمنصة
+            </button>
+        </div>
+    </div>
+
+    <!-- Active Toast notifications container -->
+    <div id="toast-container" class="fixed top-24 left-6 z-50 space-y-3 pointer-events-none"></div>
+
+    <!-- Global Footer -->
+    <footer class="bg-brand-dark text-stone-400 py-16 px-6 border-t border-brand-gold/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-xs text-center md:text-right">
+            <div class="space-y-4">
+                <h4 class="text-brand-gold font-bold text-sm">مؤسسة مَنَارَات الدولية للعمل الخيري والتنمية</h4>
+                <p class="leading-relaxed">مؤسسة دولية تنموية خاضعة للمعايير الإدارية والمالية القانونية والتدقيق الهندسي المحكم، ومسجلة بصفة رسمية في الجمهورية التركية - إسطنبول. ملتزمون بتمكين وعمارة وإعادة إعمار المساجد وتفعيل مصادر المياه النظيفة والطاقة البديلة في أشد بقاع العالم احتياجاً.</p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-brand-gold font-bold text-sm">العناوين ومراكز المتابعة الميدانية</h4>
+                <p><i class="fa-solid fa-location-dot text-brand-gold ml-2"></i> المقر الإداري: منطقة الفاتح، إسطنبول، الجمهورية التركية</p>
+                <p><i class="fa-solid fa-envelope text-brand-gold ml-2"></i> التواصل الرسمي: info@manarat-charity.org</p>
+                <p><i class="fa-solid fa-phone text-brand-gold ml-2"></i> هاتف المؤسسة: +90 212 555 44 33</p>
+            </div>
+            <div class="space-y-4 flex flex-col items-center md:items-start">
+                <h4 class="text-brand-gold font-bold text-sm">مبادئ الحوكمة والتمويل المستدام</h4>
+                <p class="leading-relaxed">كافة التحويلات المالية تخضع لأنظمة التدقيق الدولي وتودع مباشرة في الحساب البنكي القانوني للمنظمة في تركيا. لا نقبل ولا نتداول النفقات غير الموثقة بموجب محاضر الإنجاز الفنية المعمدة.</p>
+                <div class="flex gap-4 text-lg text-brand-gold mt-2">
+                    <a href="#" class="hover:text-brand-goldDark transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-brand-goldDark transition"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-brand-goldDark transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-goldDark transition"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-[10px] text-stone-600 mt-12 pt-8 border-t border-stone-800">
+            حقوق الطبع والنشر © 2026 مؤسسة منارات الدولية للعمل الخيري والتنمية. كافة الحقوق محفوظة لخدمة بيوت الله وتنمية المجتمعات.
+        </div>
+    </footer>
+
+    <!-- Core Application States & Dynamic Controller -->
+    <script>
+        // High fidelity mock database representing multiple scopes of work (Building, Renovation, Supporting Initiatives)
+        const projectsData = [
+            {
+                id: "SYR-301",
+                title: "إعادة إعمار جامع الفاروق التاريخي - حلب القديمة",
+                scope: "ترميم وإعادة تأهيل",
+                country: "سوريا",
+                state: "حلب",
+                village: "حي الصالحين القديم",
+                population: 8500,
+                status: "ready", // ready, progress, done
+                required: 54000,
+                collected: 36000,
+                gps: "36.1921, 37.1583",
+                details: "أحد المساجد التاريخية والأثرية الهامة بالمنطقة والذي تضرر بشدة بفعل المعارك التاريخية السابقة وتهدمت قبته ومئذنته بالكامل. المشروع يشمل إعادة تشييد المئذنة وفق الطابع العمراني الأصيل لحلب القديمة، تدعيم الأساسات، إعادة إكساء الجدران، وتمديد شبكة صرف وتغذية مياه حديثة.",
+                ownership: "سند وقف رسمي مقيد بمديرية أوقاف حلب",
+                imam: "الشيخ يوسف الجميلي (معين من الأوقاف)",
+                percentage: 66,
+                type: "renovation"
+            },
+            {
+                id: "YEM-102",
+                title: "مسجد ومنظومة مياه الهدى - ريف تعز الجبلي",
+                scope: "بناء وتأسيس من الصفر",
+                country: "اليمن",
+                state: "تعز",
+                village: "قرية عزلة الأشروح",
+                population: 3200,
+                status: "ready",
+                required: 38000,
+                collected: 29000,
+                gps: "13.5682, 43.9110",
+                details: "قرية جبلية وعرة ونائية يضطر كبار السن والأطفال لقطع مسافات طويلة في بطون الأودية مشياً على الأقدام لبلوغ مصلى قديم. تشييد مسجد خرساني مسلح مع حفر بئر سطحي وربطه بمضخة طاقة شمسية كاملة لخدمة أهالي القرية بالماء العذب والإنارة الكهربائية.",
+                ownership: "صك تبرع أهلي وتنازل شرعي مصدق قضائياً",
+                imam: "الشيخ فؤاد رشاد (مجاز من مكتب تعز)",
+                percentage: 76,
+                type: "new"
+            },
+            {
+                id: "SYR-302",
+                title: "دعم وإكمال مبادرة مسجد أهل الصدق - ريف إدلب",
+                scope: "دعم مبادرة مجتمعية",
+                country: "سوريا",
+                state: "إدلب",
+                village: "قرية كفر جالس",
+                population: 4100,
+                status: "ready",
+                required: 24000,
+                collected: 10500,
+                gps: "35.9810, 36.6111",
+                details: "بدأ الأهالي والنازحون ببناء جدران المسجد الأساسية بجهود محلية وتبرعات متواضعة، ثم تعثر البناء تماماً لضعف الإمكانيات المادية وعجزوا عن سقف المسجد أو إكسائه. تتدخل منارات لإتمام سقف البنية المسلحة، عزل السقف من مياه الشتاء والجليد، وإكساء المسجد بالفرش والصوتيات وميضأة متطورة.",
+                ownership: "محضر اتفاق وتخصيص باسم المجلس الإسلامي لإدارة الأوقاف",
+                imam: "الشيخ عبد الله سليم (مرشح محلي)",
+                percentage: 43,
+                type: "initiative"
+            },
+            {
+                id: "NIG-401",
+                title: "بناء مسجد النور وسقيا الخير - النيجر",
+                scope: "بناء وتأسيس من الصفر",
+                country: "النيجر",
+                state: "إقليم تيلابيري",
+                village: "بلدة غوندو النائية",
+                population: 2600,
+                status: "ready",
+                required: 19000,
+                collected: 17100,
+                gps: "13.5120, 2.0841",
+                details: "بلدة إفريقية ريفية فقيرة للغاية تفتقر لأبسط المرافق الخدمية. سيتم بناء مسجد خرساني أنيق ومقاوم لعوامل المناخ الإفريقي القاسي، مع حفر بئر ارتوازي عميق وتثبيت خزان مياه خارجي بسعة 10 آلاف لتر لإنقاذ حياة الأهالي وتأمين المياه الشرب النظيفة.",
+                ownership: "صك وقف إسلامي مصدق من المجلس الأعلى للشؤون الإسلامية بالنيجر",
+                imam: "الشيخ بكر عثمان (معتمد رسمياً)",
+                percentage: 90,
+                type: "new"
+            },
+            {
+                id: "YEM-099",
+                title: "ترميم وإصلاح مسجد الإيمان المتصدع - الحديدة",
+                scope: "ترميم وإعادة تأهيل",
+                country: "اليمن",
+                state: "الحديدة",
+                village: "قرية الكويزي الميدانية",
+                population: 1800,
+                status: "progress",
+                required: 21000,
+                collected: 21000,
+                gps: "14.7944, 42.9839",
+                details: "المشروع كان مهدداً بالسقوط بوجود تصدعات خطيرة في الأساسات والجدران بسبب رطوبة الساحل التهامي. تعمل منارات حالياً على حقن الخرسانة وإعادة تدعيم السقف والأعمدة، وتأسيس شبكة عزل حراري وميضأة حديثة.",
+                ownership: "صك ملكية رسمي موثق قضائياً",
+                imam: "الشيخ يحيى كويزي",
+                stage: "أعمال صب الخرسانة وتدعيم الأساسات الجدارية",
+                progressValue: 70,
+                type: "renovation"
+            },
+            {
+                id: "CHA-205",
+                title: "دعم وإتمام مبادرة مسجد التوحيد - تشاد",
+                scope: "دعم مبادرة مجتمعية",
+                country: "تشاد",
+                state: "إقليم حجر لميس",
+                village: "بلدة مساقط الريفية",
+                population: 3500,
+                status: "progress",
+                required: 16500,
+                collected: 16500,
+                gps: "12.4761, 15.3710",
+                details: "تعديل المبادرة الأهلية التي بدأ الأهالي بناؤها بالطين وجريد النخل. نقوم حالياً بهيكلة البنية لتصبح جدراناً صلبة مع صب سقف خرساني متين وربط المسجد بمتوضأ صحي وحفر بئر ارتوازي.",
+                ownership: "محضر تسليم وتنازل موثق محلياً",
+                imam: "الشيخ يوسف محمد",
+                stage: "أعمال تركيب النوافذ، التلييس، وصب أرضية الميضأة",
+                progressValue: 85,
+                type: "initiative"
+            },
+            {
+                id: "YEM-081",
+                title: "مسجد وبئر الرحمة المتكامل - ريف إب",
+                scope: "بناء وتأسيس من الصفر",
+                country: "اليمن",
+                state: "إب",
+                village: "قرية المحاميد الجبلية",
+                population: 3100,
+                status: "done",
+                required: 33000,
+                collected: 33000,
+                gps: "13.9715, 44.1819",
+                details: "تم إكمال البناء والتأسيس بالكامل من الصفر، وتجهيز المسجد بمنظومة طاقة شمسية وإضاءة LED مع توفير سكن خاص ومريح لإمام المسجد وحفر بئر مياه سطحي مع متوضأ وصنابير مياه خارجية لخدمة مجتمع القرية بالكامل.",
+                ownership: "صك وقفي مصدق من محكمة الاستئناف والأوقاف",
+                imam: "الشيخ عادل مصلح (مجاز شرعاً وعين بصفة رسمية)",
+                openDate: "12-02-2026",
+                type: "new"
+            },
+            {
+                id: "SYR-079",
+                title: "إعادة تأهيل وإعمار مسجد التوبة - حمص",
+                scope: "ترميم وإعادة تأهيل",
+                country: "سوريا",
+                state: "حمص",
+                village: "حي الخالدية المستقر",
+                population: 9800,
+                status: "done",
+                required: 41000,
+                collected: 41000,
+                gps: "34.7410, 36.7214",
+                details: "كان المسجد مهدماً جزئياً وتالداً بفعل شظايا المعارك السابقة بالمنطقة. تم الانتهاء بالكامل من أعمال ترميم القبة المتضررة وإصلاح التصدعات العميقة في الجدران وإعادة دهان المسجد وفرشه بالكامل بالتعاون مع أهالي الحي.",
+                ownership: "سند رسمي صادر عن أمانة أوقاف حمص",
+                imam: "الشيخ رضوان الخالد (معين رسمياً)",
+                openDate: "05-04-2026",
+                type: "renovation"
+            }
+        ];
+
+        let activeTab = 'main';
+        let projectFilter = 'ready';
+        let currentWizardStep = 1;
+        let selectedProjectForDonation = null;
+        let selectedAdminCaseId = null;
+
+        // Dynamic navigation tabs system
+        function switchTab(tabName) {
+            // Hide all tab sections
+            document.querySelectorAll('main > section').forEach(section => section.classList.add('hidden'));
+            
+            // Show targeted tab section
+            const targetSection = document.getElementById(`tab-${tabName}`);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+
+            // Reset navigation links styling
+            document.querySelectorAll('nav button').forEach(button => {
+                if (button.id === 'nav-dashboard') {
+                    button.className = "px-4 py-2 bg-brand-emerald/5 text-brand-emerald rounded-xl text-sm font-bold hover:bg-brand-emerald hover:text-white transition duration-200 flex items-center gap-1.5";
+                } else {
+                    button.className = "px-4 py-2 text-stone-600 hover:text-brand-emerald text-sm font-semibold transition duration-200";
+                }
+            });
+
+            // Set active class indicators
+            const activeNav = document.getElementById(`nav-${tabName}`);
+            if (activeNav) {
+                if (tabName === 'dashboard') {
+                    activeNav.className = "px-4 py-2 bg-brand-emerald text-white rounded-xl text-sm font-bold transition duration-200 flex items-center gap-1.5";
+                } else {
+                    activeNav.classList.add('nav-active');
+                }
+            }
+
+            activeTab = tabName;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Triggers for dynamic sections load
+            if (tabName === 'projects') {
+                renderProjects();
+            } else if (tabName === 'dashboard') {
+                renderDashboard();
+            }
+        }
+
+        // Project filter tabs control
+        function filterProjects(status) {
+            projectFilter = status;
+            
+            // Reset filters tabs active styling
+            document.querySelectorAll('#tab-projects button').forEach(btn => {
+                if (btn.id.startsWith('proj-tab-')) {
+                    btn.className = "pb-3 px-2 text-stone-500 hover:text-brand-emerald text-sm transition font-medium";
+                }
+            });
+
+            const activeBtn = document.getElementById(`proj-tab-${status}`);
+            if (activeBtn) {
+                activeBtn.className = "pb-3 px-2 text-brand-emerald font-bold border-b-2 border-brand-gold text-sm transition";
+            }
+
+            renderProjects();
+        }
+
+        // Render project catalogs beautifully
+        function renderProjects() {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '';
+
+            const filtered = projectsData.filter(p => p.status === projectFilter);
+
+            // Update sub-tabs counter badges dynamically
+            document.getElementById('badge-ready').innerText = projectsData.filter(p => p.status === 'ready').length;
+            document.getElementById('badge-progress').innerText = projectsData.filter(p => p.status === 'progress').length;
+            document.getElementById('badge-done').innerText = projectsData.filter(p => p.status === 'done').length;
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-20 text-stone-400 space-y-3">
+                        <i class="fa-solid fa-hourglass text-4xl text-stone-300"></i>
+                        <p class="text-xs font-semibold">لا يوجد مشاريع متوفرة تحت هذا التصنيف حالياً.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(p => {
+                let cardHtml = '';
+                // Scope Color Badges
+                let scopeColor = "bg-blue-50 text-blue-800 border-blue-100";
+                if (p.scope === "ترميم وإعادة تأهيل") scopeColor = "bg-amber-50 text-amber-800 border-amber-100";
+                if (p.scope === "بناء وتأسيس من الصفر") scopeColor = "bg-brand-emerald/5 text-brand-emerald border-brand-emerald/10";
+
+                if (p.status === 'ready') {
+                    cardHtml = `
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 hover:shadow-md transition duration-300 flex flex-col justify-between">
+                            <div class="p-8 space-y-6">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[10px] font-bold border px-3 py-1 rounded-full ${scopeColor}">${p.scope}</span>
+                                    <span class="text-[10px] text-stone-400 font-bold uppercase tracking-wider">كود: ${p.id}</span>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <span class="text-[10px] font-black text-brand-goldDark block uppercase tracking-wider">${p.country} • ${p.state}</span>
+                                    <h3 class="font-bold text-brand-dark text-lg leading-snug">${p.title}</h3>
+                                    <p class="text-xs text-stone-500 leading-relaxed line-clamp-3">${p.details}</p>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <div class="flex justify-between text-[11px] font-semibold">
+                                        <span class="text-stone-500">تم جمع: $${p.collected.toLocaleString()}</span>
+                                        <span class="text-brand-emerald font-bold">${p.percentage}%</span>
+                                    </div>
+                                    <div class="w-full bg-stone-100 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-gradient-to-r from-brand-gold to-brand-emerald h-full rounded-full" style="width: ${p.percentage}%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-[10px] text-stone-400">
+                                        <span>الهدف التمويلي: $${p.required.toLocaleString()}</span>
+                                        <span>المتبقي: $${(p.required - p.collected).toLocaleString()}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-6 bg-stone-50/50 border-t border-stone-100 flex gap-3">
+                                <button onclick="openDonationModal('${p.id}')" class="flex-grow bg-brand-emerald hover:bg-brand-gold hover:text-brand-dark text-white font-bold py-3 rounded-xl transition text-xs shadow-sm">
+                                    <i class="fa-solid fa-heart-circle-check"></i> ساهم وتبرع الآن
+                                </button>
+                                <button onclick="showProjectDetails('${p.id}')" class="bg-white hover:bg-stone-100 text-stone-700 border border-stone-200 px-4 py-3 rounded-xl transition text-xs font-semibold">
+                                    تفاصيل
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                } else if (p.status === 'progress') {
+                    cardHtml = `
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 hover:shadow-md transition duration-300 flex flex-col justify-between">
+                            <div class="p-8 space-y-6">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[10px] font-bold border px-3 py-1 rounded-full ${scopeColor}">${p.scope}</span>
+                                    <span class="text-[10px] text-stone-400 font-bold">${p.country} • ${p.state}</span>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <h3 class="font-bold text-brand-dark text-lg leading-snug">${p.title}</h3>
+                                    <p class="text-xs text-stone-500 leading-relaxed line-clamp-3">${p.details}</p>
+                                </div>
+
+                                <div class="bg-brand-emerald/5 p-4 rounded-2xl border border-brand-emerald/10 space-y-2">
+                                    <div class="flex justify-between items-center text-xs">
+                                        <span class="font-bold text-brand-emerald">المرحلة الميدانية الحالية:</span>
+                                        <span class="bg-brand-emerald text-white text-[9px] px-2.5 py-1 rounded-full font-bold">${p.progressValue}% إنجاز</span>
+                                    </div>
+                                    <p class="text-[11px] text-stone-600 font-medium">${p.stage}</p>
+                                    <div class="w-full bg-stone-100 h-1.5 rounded-full overflow-hidden">
+                                        <div class="bg-brand-emerald h-full rounded-full" style="width: ${p.progressValue}%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-6 bg-stone-50/50 border-t border-stone-100 text-center">
+                                <span class="text-brand-emerald text-xs font-bold flex items-center justify-center gap-1.5"><i class="fa-solid fa-circle-check"></i> مكتمل التمويل بالكامل وقيد البناء</span>
+                            </div>
+                        </div>
+                    `;
+                } else if (p.status === 'done') {
+                    cardHtml = `
+                        <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 hover:shadow-md transition duration-300 flex flex-col justify-between">
+                            <div class="p-8 space-y-6">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-[10px] font-bold border px-3 py-1 rounded-full ${scopeColor}">${p.scope}</span>
+                                    <span class="text-[10px] text-stone-400 font-bold">تاريخ الافتتاح: ${p.openDate}</span>
+                                </div>
+                                
+                                <div class="space-y-2">
+                                    <h3 class="font-bold text-brand-dark text-lg leading-snug">${p.title}</h3>
+                                    <p class="text-xs text-stone-500 leading-relaxed line-clamp-3">${p.details}</p>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3 text-[10px] bg-stone-50 p-4 rounded-xl border border-stone-150">
+                                    <div>
+                                        <span class="text-stone-400 block mb-0.5">الإمام المشرف والمعين</span>
+                                        <span class="font-bold text-stone-700">${p.imam}</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-stone-400 block mb-0.5">المستفيدين المباشرين</span>
+                                        <span class="font-bold text-stone-700">${p.population} نسمة</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-6 bg-stone-50/50 border-t border-stone-100 text-center flex justify-center items-center gap-2 text-brand-emerald font-bold text-xs">
+                                <i class="fa-solid fa-mosque text-brand-gold"></i> تم الافتتاح وإقامة شعائر الصلاة
+                            </div>
+                        </div>
+                    `;
+                }
+                container.innerHTML += cardHtml;
+            });
+        }
+
+        // Survey Wizard validation & navigation
+        function wizardNext() {
+            if (currentWizardStep < 4) {
+                // Validate inputs in current step
+                if (!validateStep(currentWizardStep)) {
+                    showToast("يرجى ملء جميع الحقول المطلوبة والمؤشر عليها باللون الأحمر *", "error");
+                    return;
+                }
+                document.getElementById(`form-step-${currentWizardStep}`).classList.add('hidden');
+                currentWizardStep++;
+                document.getElementById(`form-step-${currentWizardStep}`).classList.remove('hidden');
+                updateWizardHeader();
+            }
+        }
+
+        function wizardPrev() {
+            if (currentWizardStep > 1) {
+                document.getElementById(`form-step-${currentWizardStep}`).classList.add('hidden');
+                currentWizardStep--;
+                document.getElementById(`form-step-${currentWizardStep}`).classList.remove('hidden');
+                updateWizardHeader();
+            }
+        }
+
+        function validateStep(stepNum) {
+            let isValid = true;
+            const container = document.getElementById(`form-step-${stepNum}`);
+            const inputs = container.querySelectorAll('input[required], select[required]');
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+            return isValid;
+        }
+
+        function updateWizardHeader() {
+            document.getElementById('wizard-step-num').innerText = currentWizardStep;
+            
+            const titles = {
+                1: { title: "الخطوة الأولى: البيانات الأساسية للباحث والموقع", desc: "جمع بيانات التواصل الدقيقة والإحداثيات الجغرافية على الخارطة" },
+                2: { title: "الخطوة الثانية: تقييم الاحتياج الجغرافي والديموغرافي", desc: "تحديد مستوى الاحتياج ونوع التدخل ومسافة أقرب مساجد قائمة" },
+                3: { title: "الخطوة الثالثة: المعايير الجيولوجية والشرعية للأرض", desc: "التثبت من عدم وجود منازعات وفحص البنية والمساحات المتوفرة" },
+                4: { title: "الخطوة الرابعة: رفع المستندات والملفات الثبوتية", desc: "تحميل صكوك الملكية والتوقيع على إقرار صحة البيانات" }
+            };
+
+            document.getElementById('wizard-step-title').innerText = titles[currentWizardStep].title;
+            document.getElementById('wizard-step-desc').innerText = titles[currentWizardStep].desc;
+
+            // Buttons visibility toggling
+            if (currentWizardStep === 1) {
+                document.getElementById('wizard-prev-btn').classList.add('hidden');
+                document.getElementById('wizard-next-btn').classList.remove('hidden');
+                document.getElementById('wizard-submit-btn').classList.add('hidden');
+            } else if (currentWizardStep === 4) {
+                document.getElementById('wizard-prev-btn').classList.remove('hidden');
+                document.getElementById('wizard-next-btn').classList.add('hidden');
+                document.getElementById('wizard-submit-btn').classList.remove('hidden');
+            } else {
+                document.getElementById('wizard-prev-btn').classList.remove('hidden');
+                document.getElementById('wizard-next-btn').classList.remove('hidden');
+                document.getElementById('wizard-submit-btn').classList.add('hidden');
+            }
+        }
+
+        function updateFileLabel(labelId, inputEl) {
+            if (inputEl.files.length > 0) {
+                document.getElementById(labelId).innerHTML = `<i class="fa-solid fa-circle-check text-brand-emerald"></i> تم تحميل الملف بنجاح: ${inputEl.files[0].name}`;
+            }
+        }
+
+        // Automatic GPS geolocation collector
+        function getLocation() {
+            if (navigator.geolocation) {
+                showToast("جاري الحصول على الإحداثيات الجغرافية من القمر الصناعي...", "info");
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const coords = `${position.coords.latitude.toFixed(6)}, ${position.coords.longitude.toFixed(6)}`;
+                        document.getElementById('eval-gps').value = coords;
+                        showToast("تم مطابقة وتحديد إحداثيات موقعك الجغرافي الحالي بنجاح!", "success");
+                    },
+                    (error) => {
+                        showToast("تعذر جلب الموقع التلقائي نظراً لسياسة الخصوصية بالمتصفح، يرجى كتابتها يدوياً.", "warning");
+                    }
+                );
+            } else {
+                showToast("المتصفح لا يدعم تحديد الموقع الجغرافي المتكامل.", "error");
+            }
+        }
+
+        // Handle case submissions
+        function handleWizardSubmit(event) {
+            event.preventDefault();
+
+            if (!document.getElementById('eval-agreement').checked) {
+                showToast("يرجى التوقيع والموافقة على إقرار صحة المعلومات الميدانية المكتوبة.", "error");
+                return;
+            }
+
+            const reqId = "REQ-" + Math.floor(100 + Math.random() * 900);
+            const newCase = {
+                id: reqId,
+                title: "دراسة وإعمار مسجد " + document.getElementById('eval-village').value,
+                scope: document.getElementById('eval-intervention-type').value,
+                country: document.getElementById('eval-country').value,
+                state: document.getElementById('eval-state').value,
+                village: document.getElementById('eval-village').value,
+                population: parseInt(document.getElementById('eval-population').value) || 1200,
+                status: "ready", 
+                required: 28000,
+                collected: 0,
+                gps: document.getElementById('eval-gps').value || "36.2012, 37.1590",
+                details: "مبادرة تنموية جديدة مرفوعة من الباحث الميداني " + document.getElementById('eval-name').value + ". يبلغ تعداد المستفيدين في القرية حوالي " + document.getElementById('eval-population').value + " نسمة. الوضع الإنشائي المقيم: " + document.getElementById('eval-current-status').value + ". يبلغ البعد عن أقرب مصلى قائم: " + document.getElementById('eval-distance').value + " كم مشياً على الأقدام.",
+                ownership: document.getElementById('eval-land-ownership').value,
+                phone: document.getElementById('eval-phone').value,
+                road: document.getElementById('eval-road').value,
+                noConflict: document.getElementById('eval-no-conflict').value,
+                landArea: document.getElementById('eval-land-area').value,
+                geo: document.getElementById('eval-geo').value,
+                water: document.getElementById('eval-water').value,
+                electricity: document.getElementById('eval-electricity').value,
+                imam: "بانتظار التعميد وتعيين أوقاف المنطقة",
+                percentage: 0,
+                isAdminApproved: false 
+            };
+
+            // Push into simulation list
+            projectsData.push(newCase);
+
+            // Open Success Dialog showing printed code
+            showSuccessModal(
+                "تم تسجيل المبادرة بنجاح وبانتظار المراجعة",
+                `تم حفظ ورفع استمارة التقييم الخاصة بك وتوليد كود الحوكمة الدولي الخاص بطلبك (${reqId}). سيقوم الفريق المالي والهندسي بإسطنبول بمراجعة الحيازة وصور الأرض خلال 48 ساعة. يمكنك معاينتها واعتمادها الآن عبر "الإدارة الميدانية" بالأعلى.`,
+                newCase
+            );
+
+            // Reset wizard completely
+            document.getElementById('evaluation-wizard-form').reset();
+            document.getElementById(`form-step-4`).classList.add('hidden');
+            currentWizardStep = 1;
+            document.getElementById(`form-step-1`).classList.remove('hidden');
+            updateWizardHeader();
+
+            // Reset upload file labels
+            document.getElementById('eval-file-proof-label').innerText = "ارفع صك الملكية، سند الوقفية أو وثيقة التنازل الشرعي (PDF)";
+            document.getElementById('eval-file-letter-label').innerText = "ارفع وثيقة الطلب أو التأييد الصادر عن الأوقاف أو الإدارة المحلية";
+            document.getElementById('eval-file-photos-label').innerText = "ارفع ملفاً مضغوطاً لصور الأرض الحالية وفيديو 360 درجة لموقع البناء المقترح";
+        }
+
+        // Render Field backoffice dashboard
+        function renderDashboard() {
+            const listContainer = document.getElementById('dashboard-cases-list');
+            listContainer.innerHTML = '';
+
+            // Find all pending and newly registered initiatives
+            const cases = projectsData.filter(p => p.id.startsWith("REQ-") || p.status === 'ready');
+
+            // Update statistics indicators
+            document.getElementById('dashboard-pending-count').innerText = cases.filter(c => c.isAdminApproved === false || c.id.startsWith("REQ-")).length;
+            document.getElementById('dashboard-active-count').innerText = projectsData.filter(p => p.status === 'progress').length;
+
+            cases.forEach(c => {
+                const isApproved = c.isAdminApproved;
+                const badge = isApproved 
+                    ? `<span class="bg-brand-emerald/10 text-brand-emerald text-[9px] px-2.5 py-1 rounded-full font-bold">معتمد ومطروح للتبرع</span>`
+                    : `<span class="bg-amber-100 text-amber-800 text-[9px] px-2.5 py-1 rounded-full font-bold">قيد الفحص والمطابقة</span>`;
+
+                listContainer.innerHTML += `
+                    <button onclick="viewAdminCaseDetail('${c.id}')" class="w-full text-right p-4 rounded-2xl border border-stone-100 hover:bg-stone-50 hover:border-brand-gold transition flex flex-col gap-2 focus:ring-1 focus:ring-brand-gold">
+                        <div class="flex justify-between items-center w-full">
+                            <span class="font-bold text-brand-dark text-xs">${c.title}</span>
+                            <span class="text-[9px] text-stone-400 font-bold tracking-wider">${c.id}</span>
+                        </div>
+                        <div class="flex justify-between items-center w-full text-[10px] text-stone-500">
+                            <span>النطاق: ${c.country} • ${c.scope}</span>
+                            ${badge}
+                        </div>
+                    </button>
+                `;
+            });
+
+            if (selectedAdminCaseId) {
+                viewAdminCaseDetail(selectedAdminCaseId);
+            }
+        }
+
+        // Display deep administration card analysis
+        function viewAdminCaseDetail(caseId) {
+            selectedAdminCaseId = caseId;
+            const c = projectsData.find(p => p.id === caseId);
+            const detailContainer = document.getElementById('dashboard-case-detail');
+
+            if (!c) return;
+
+            let controlPanel = '';
+            if (!c.id.startsWith("SYR-") && !c.id.startsWith("YEM-") && !c.id.startsWith("NIG-") && !c.id.startsWith("CHA-") && !c.isAdminApproved) {
+                controlPanel = `
+                    <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-xs space-y-1 text-right">
+                            <h5 class="font-bold text-brand-dark">هل استوفت الحالة الفحص الشرعي والهندسي؟</h5>
+                            <p class="text-stone-500">بموافقتك، سيتم تفعيل وادراج المشروع تلقائياً في صفحة المانحين لاستقبال التبرعات والتمويل.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="approveAdminCase('${c.id}')" class="bg-brand-emerald hover:bg-brand-emerald/90 text-white font-bold px-6 py-2.5 rounded-xl text-xs transition">إقرار واعتماد الحالة</button>
+                            <button onclick="showToast('تم إرسال طلب استيفاء تعديلات فنية للباحث الميداني', 'warning')" class="bg-white hover:bg-stone-100 text-stone-700 border border-stone-200 px-4 py-2.5 rounded-xl text-xs transition">طلب تعديل</button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                controlPanel = `
+                    <div class="bg-brand-emerald/5 p-4 rounded-2xl border border-brand-emerald/10 text-brand-emerald text-xs flex gap-3 items-center">
+                        <i class="fa-solid fa-circle-check text-lg"></i>
+                        <span class="font-bold">هذه الحالة معتمدة ومصادق عليها بالكامل من مجلس إدارة منارات في إسطنبول ويجري حالياً تمويلها.</span>
+                    </div>
+                `;
+            }
+
+            detailContainer.innerHTML = `
+                <div class="space-y-6 text-right">
+                    <div class="flex justify-between items-center border-b pb-4">
+                        <div>
+                            <span class="text-[10px] text-brand-goldDark font-bold uppercase tracking-wider">${c.scope}</span>
+                            <h4 class="font-black text-brand-dark text-xl">${c.title}</h4>
+                            <p class="text-xs text-stone-500 mt-1">الموقع: ${c.country} • إقليم ${c.state} • قرية ${c.village}</p>
+                        </div>
+                        <span class="text-xs font-bold text-stone-400">الكود الحوكمي: ${c.id}</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-stone-50 p-4 rounded-xl border border-stone-150"><span class="text-stone-400 text-[10px] block">عدد المستفيدين</span><span class="font-bold text-stone-700 text-xs">${c.population} نسمة</span></div>
+                        <div class="bg-stone-50 p-4 rounded-xl border border-stone-150"><span class="text-stone-400 text-[10px] block">الحيازة الشرعية</span><span class="font-bold text-stone-700 text-xs">${c.ownership}</span></div>
+                        <div class="bg-stone-50 p-4 rounded-xl border border-stone-150"><span class="text-stone-400 text-[10px] block">إحداثيات GPS</span><span class="font-bold text-brand-emerald text-[11px] underline block"><a href="https://maps.google.com/?q=${c.gps}" target="_blank">${c.gps}</a></span></div>
+                        <div class="bg-stone-50 p-4 rounded-xl border border-stone-150"><span class="text-stone-400 text-[10px] block">مستوى الأمان</span><span class="font-bold text-brand-emerald text-xs">خالٍ من النزاعات 100%</span></div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h5 class="font-bold text-brand-dark text-sm">بيان دراسة الحالة والاحتياج الميداني الموثق:</h5>
+                        <p class="text-stone-600 text-xs leading-relaxed bg-stone-50 p-5 rounded-2xl border border-stone-200">${c.details}</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-150"><i class="fa-solid fa-road text-stone-400 ml-1"></i> حالة الطريق: <strong>${c.road || "طريق معبد"}</strong></div>
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-150"><i class="fa-solid fa-droplet text-stone-400 ml-1"></i> إمدادات المياه: <strong>${c.water || "بئر جوفي"}</strong></div>
+                        <div class="p-3 bg-stone-50 rounded-xl border border-stone-150"><i class="fa-solid fa-bolt text-stone-400 ml-1"></i> تمديدات الطاقة: <strong>${c.electricity || "طاقة شمسية"}</strong></div>
+                    </div>
+
+                    <!-- Documents Checklist Preview -->
+                    <div class="space-y-3">
+                        <h5 class="font-bold text-brand-dark text-sm">المستندات والصكوك الملحقة رقمياً:</h5>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-[11px]">
+                            <div class="flex items-center justify-between p-3 bg-brand-emerald/5 border border-brand-emerald/10 rounded-xl text-brand-emerald">
+                                <span class="font-bold"><i class="fa-solid fa-file-pdf"></i> سند ملكية وقف الأرض.pdf</span>
+                                <span class="text-[9px] bg-brand-emerald text-white px-2 py-0.5 rounded-full font-bold">معتمد</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-brand-emerald/5 border border-brand-emerald/10 rounded-xl text-brand-emerald">
+                                <span class="font-bold"><i class="fa-solid fa-file-signature"></i> تأييد الأوقاف الرسمية.pdf</span>
+                                <span class="text-[9px] bg-brand-emerald text-white px-2 py-0.5 rounded-full font-bold">موثق</span>
+                            </div>
+                            <div class="flex items-center justify-between p-3 bg-brand-emerald/5 border border-brand-emerald/10 rounded-xl text-brand-emerald">
+                                <span class="font-bold"><i class="fa-solid fa-camera"></i> ألبوم صور وفيديو 360</span>
+                                <span class="text-[9px] bg-brand-emerald text-white px-2 py-0.5 rounded-full font-bold">مصادق</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    ${controlPanel}
+                </div>
+            `;
+        }
+
+        function approveAdminCase(caseId) {
+            const index = projectsData.findIndex(p => p.id === caseId);
+            if (index !== -1) {
+                projectsData[index].isAdminApproved = true;
+                projectsData[index].status = 'ready'; // Deploy directly on ready projects
+                showToast(`تم تعميد وتفويض المبادرة والمشروع الكودي (${caseId}) ونشره بنجاح للداعمين!`, "success");
+                renderDashboard();
+            }
+        }
+
+        // Open/Close Donation Framework
+        function openDonationModal(projectId) {
+            const p = projectsData.find(proj => proj.id === projectId);
+            if (!p) return;
+
+            selectedProjectForDonation = p;
+            document.getElementById('donate-mosque-subtitle').innerText = `رمز المشروع: ${p.id} • ${p.title}`;
+            document.getElementById('custom-donation-input').value = '500';
+
+            // Show global layout modal
+            document.getElementById('modal-container').classList.remove('hidden');
+            document.getElementById('donation-modal').classList.remove('hidden');
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        function setDonationAmount(val) {
+            document.getElementById('custom-donation-input').value = val;
+        }
+
+        function processMockDonation() {
+            const amount = parseFloat(document.getElementById('custom-donation-input').value);
+            if (isNaN(amount) || amount <= 0) {
+                showToast("يرجى كتابة أو تحديد قيمة صحيحة ومقبولة للتبرع بالدولار.", "error");
+                return;
+            }
+
+            if (selectedProjectForDonation) {
+                // Update simulation database
+                selectedProjectForDonation.collected += amount;
+                if (selectedProjectForDonation.collected >= selectedProjectForDonation.required) {
+                    selectedProjectForDonation.collected = selectedProjectForDonation.required;
+                    selectedProjectForDonation.status = 'progress'; // Push into active construction stage
+                    selectedProjectForDonation.stage = "مرحلة تصفية الأرض وتسويتها وبدء التأسيس الخرساني الميداني";
+                    selectedProjectForDonation.progressValue = 15;
+                }
+                selectedProjectForDonation.percentage = Math.round((selectedProjectForDonation.collected / selectedProjectForDonation.required) * 100);
+
+                // Hide donation window and present congratulations card
+                document.getElementById('donation-modal').classList.add('hidden');
+                document.getElementById('success-modal').classList.remove('hidden');
+
+                document.getElementById('success-modal-title').innerText = "شكر الله صنيعك وتقبل مساهمتك";
+                document.getElementById('success-modal-body').innerText = "تم إدراج وقيد تبرعك بنجاح، وسيقوم المندوب الميداني بتوجيه تقرير مصور لخطوات البناء القادمة برابط مباشر.";
+
+                // Printable receipt loading
+                document.getElementById('receipt-box').classList.remove('hidden');
+                document.getElementById('receipt-date').innerText = new Date().toLocaleDateString('ar-EG');
+                document.getElementById('receipt-project-title').innerText = selectedProjectForDonation.title;
+                document.getElementById('receipt-amount').innerText = `$${amount.toLocaleString()}`;
+
+                // Recalculate global counter summaries dynamically
+                let comp = parseInt(document.getElementById('stat-completed').innerText);
+                let act = parseInt(document.getElementById('stat-active').innerText);
+                let pend = parseInt(document.getElementById('stat-pending').innerText);
+
+                if (selectedProjectForDonation.status === 'progress') {
+                    document.getElementById('stat-active').innerText = act + 1;
+                    document.getElementById('stat-pending').innerText = Math.max(0, pend - 1);
+                }
+
+                showToast("الحمد لله، تم قيد المساهمة التنموية بنجاح!", "success");
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal-container').classList.add('hidden');
+            document.getElementById('donation-modal').classList.add('hidden');
+            document.getElementById('success-modal').classList.add('hidden');
+            selectedProjectForDonation = null;
+            if (activeTab === 'projects') renderProjects();
+        }
+
+        function showSuccessModal(title, body, insertedCase) {
+            document.getElementById('modal-container').classList.remove('hidden');
+            document.getElementById('donation-modal').classList.add('hidden');
+            document.getElementById('success-modal').classList.remove('hidden');
+
+            document.getElementById('success-modal-title').innerText = title;
+            document.getElementById('success-modal-body').innerText = body;
+
+            // Generate receipt for survey submission
+            const box = document.getElementById('receipt-box');
+            box.classList.remove('hidden');
+            document.getElementById('receipt-date').innerText = new Date().toLocaleDateString('ar-EG');
+            document.getElementById('receipt-project-title').innerText = insertedCase.title;
+            document.getElementById('receipt-amount').innerText = `طلب حوكمة رقم: ${insertedCase.id}`;
+        }
+
+        function showProjectDetails(projectId) {
+            const p = projectsData.find(proj => proj.id === projectId);
+            if (!p) return;
+            showSuccessModal(
+                "بيانات وتفاصيل المسح الميداني للمسجد",
+                `${p.details}\n\nنوع الملكية: ${p.ownership}\nالمستفيدين: ${p.population} نسمة\nإحداثيات الموقع: ${p.gps}`,
+                p
+            );
+        }
+
+        // Chatbot display toggles
+        function toggleChat() {
+            const panel = document.getElementById('manarat-chat-panel');
+            panel.classList.toggle('hidden');
+        }
+
+        function handleChatKey(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        // Integrated Chatbot System using Gemini API
+        async function sendChatMessage() {
+            const input = document.getElementById('chat-user-input');
+            const query = input.value.trim();
+            if (!query) return;
+
+            // User bubble render
+            const container = document.getElementById('chat-messages-container');
+            container.innerHTML += `
+                <div class="bg-brand-emerald text-white p-3 rounded-2xl max-w-[85%] self-end mr-auto text-stone-100 text-right leading-relaxed">
+                    <p>${query}</p>
+                </div>
+            `;
+            input.value = '';
+            container.scrollTop = container.scrollHeight;
+
+            // Shimmer effect placeholder
+            const shimId = "shim-" + Math.floor(Math.random() * 1000);
+            container.innerHTML += `
+                <div id="${shimId}" class="bg-white p-3 rounded-2xl border border-stone-100 max-w-[85%] self-start text-stone-800 space-y-2 text-right">
+                    <div class="shimmer h-3 w-20 rounded"></div>
+                    <div class="shimmer h-3 w-36 rounded"></div>
+                </div>
+            `;
+            container.scrollTop = container.scrollHeight;
+
+            // Pre-established System Prompt for the AI agent
+            const systemPrompt = `
+                أنت مساعد الذكاء الاصطناعي التنموي لمؤسسة منارات الدولية للعمل الخيري والتنمية ومقرها إسطنبول، تركيا.
+                تتميز المؤسسة بمعايير حوكمة صارمة جداً وشفافية مطلقة لا تخرق القواعد.
+                أجب على المستخدم بناءً على ميثاق المؤسسة التالي:
+                1. نطاق العمل التنموي:
+                   - البناء والتأسيس الكامل للمساجد من الصفر في القرى شديدة الاحتياج.
+                   - ترميم وإعادة إعمار وتأهيل المساجد المتضررة والمدمرة (خاصة في سوريا واليمن بمناطق العائدين والمستقرة) والحفاظ على المساجد الأثرية والتاريخية.
+                   - دعم وتمكين المبادرات المجتمعية المتعثرة (إكمال بناء وتثبيت أسقف مساجد بدأها الأهالي ولم يستطيعوا إكمالها لضعف الميزانيات).
+                2. شروط قبول المسجد (شديدة الأهمية لمنع التلاعب):
+                   - وجود وثيقة ملكية أو صك وقف معتمد رسمياً باسم الأوقاف وخالٍ تماماً من الخلافات العشائرية أو العائلية.
+                   - الكثافة السكانية: أن تخدم المنطقة عدداً كافياً من السكان، وتبعد المسافة عن أقرب مسجد قائم مالا يقل عن 1.5 - 2 كيلومتر.
+                   - تحديد إحداثيات الـ GPS بدقة وتصوير الأرض 360 درجة لضمان عدم ازدواجية التمويل.
+                3. الرقابة والشفافية المالية:
+                   - صرف أموال البناء للمقاولين بنظام الدفعات المشروطة بالإنجاز الفني والتوثيق الفوتوغرافي للمراحل (الأساسات، الأعمدة، السقف، التشطيب، التسليم).
+                   - لا نقبل تبرعات عينية مجهولة المصدر، الحسابات بنكية رسمية فقط في تركيا.
+                4. مرحلة ما بعد الافتتاح:
+                   - نسلم المساجد بالكامل لمكاتب الأوقاف الرسمية لتعيين الأئمة والوعاظ المعتمدين والمصادقة على أهليتهم.
+                   - نشترط استدامة تشغيلية (صندوق أوقاف صغرى دكان، بئر تجاري، منظومة شمسية ملحقة) لتغطية الرواتب والنظافة دون الحاجة لسؤال مستمر للتبرعات.
+
+                تكلم بلغة رصينة، إسلامية راقية، مهذبة جداً وواضحة، وركز على تقديم حلول تفيد السائل. لا تذكر الأكواد البرمجية نهائياً.
+            `;
+
+            const apiKey = ""; // Runtime automatically injected key by platform
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: query }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] }
+                    })
+                });
+
+                const data = await response.json();
+                const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "أعتذر منك يا أخي الكريم، تعذر الاتصال بالخادم الذكي حالياً. يرجى إعادة المحاولة أو مراسلتنا عبر قنوات التواصل المتاحة بالموقع.";
+
+                document.getElementById(shimId).remove();
+
+                container.innerHTML += `
+                    <div class="bg-white p-3 rounded-2xl border border-stone-150 max-w-[85%] self-start text-stone-800 space-y-1 text-right leading-relaxed">
+                        <p class="font-bold text-brand-emerald"><i class="fa-solid fa-mosque text-brand-gold ml-1"></i> مستشار منارات:</p>
+                        <p class="whitespace-pre-line text-stone-600">${text}</p>
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById(shimId).remove();
+                container.innerHTML += `
+                    <div class="bg-red-50 p-3 rounded-2xl border border-red-100 max-w-[85%] self-start text-red-800 text-right leading-relaxed">
+                        <p>نأسف، حدث خطأ أثناء معالجة طلبك الذكي. يرجى المحاولة لاحقاً.</p>
+                    </div>
+                `;
+            }
+            container.scrollTop = container.scrollHeight;
+        }
+
+        // Clean & Modern Toast notifications
+        function showToast(message, type = "success") {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+
+            const themes = {
+                success: "bg-brand-dark border-brand-emerald text-white",
+                error: "bg-red-950 border-red-500 text-red-100",
+                warning: "bg-amber-950 border-amber-500 text-amber-100",
+                info: "bg-stone-900 border-stone-700 text-white"
+            };
+
+            const icons = {
+                success: "fa-circle-check text-brand-gold",
+                error: "fa-triangle-exclamation text-red-400",
+                warning: "fa-circle-exclamation text-amber-400",
+                info: "fa-circle-info text-sky-400"
+            };
+
+            toast.className = `p-4 rounded-xl border shadow-lg flex items-center gap-3 transition duration-300 transform translate-x-4 opacity-0 pointer-events-auto max-w-sm ${themes[type]}`;
+            toast.innerHTML = `
+                <i class="fa-solid ${icons[type]} text-lg shrink-0"></i>
+                <span class="text-xs font-semibold leading-relaxed text-right">${message}</span>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-x-4', 'opacity-0');
+            }, 50);
+
+            setTimeout(() => {
+                toast.classList.add('translate-x-4', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 5000);
+        }
+
+        // Initialize application on windows load
+        window.onload = function() {
+            renderProjects();
+        };
+    </script>
+</body>
+</html>
